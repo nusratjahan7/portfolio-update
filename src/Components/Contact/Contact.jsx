@@ -59,7 +59,7 @@ export default function Contact() {
 
     return (
         <section id="contact" className="!py-10">
-            <div className="px-4 sm:w-11/12 mx-auto">
+            <div className="px-4 sm:w-11/12 sm:mx-auto">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
