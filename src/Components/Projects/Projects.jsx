@@ -15,7 +15,7 @@ const projects = [
         tags: ["React", "Tailwind CSS", "ES6+"],
         name: "DigiTools",
         desc: "DigiTools Web is a modern and responsive web application that provides a collection of useful digital tools in one place.",
-        git: "https://github.com/nusratjahan7/Payoo-Resources",
+        git: "https://github.com/nusratjahan7/digitools-web",
         live: "https://digitools-web.vercel.app/",
     },
     {
