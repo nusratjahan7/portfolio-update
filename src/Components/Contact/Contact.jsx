@@ -59,7 +59,7 @@ export default function Contact() {
 
     return (
         <section id="contact" className="!py-10">
-            <div className="w-11/12 mx-auto">
+            <div className="px-4 sm:w-11/12 mx-auto">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -113,7 +113,7 @@ export default function Contact() {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.5 }}
                             viewport={{ once: true }}
-                            className="flex gap-4 mt-2"
+                            className="flex flex-wrap gap-4 mt-2"
                         >
                             <Link href="https://github.com/nusratjahan7" target="_blank" className="flex items-center gap-2 !px-5 !py-3 rounded-xl bg-(--card) border border-(--border) text-sm font-medium hover:border-(--accent) hover:text-(--accent) transition-colors">
                                 <FiGithub className="text-[18px]" /> GitHub
