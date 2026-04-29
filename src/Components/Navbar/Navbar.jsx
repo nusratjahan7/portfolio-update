@@ -40,6 +40,7 @@ const Navbar = () => {
                                 About
                             </a>
                         </li>
+                        
                         <li>
                             <a href="#skills" onClick={() => setOpen(false)} className="block hover:text-(--accent) transition">
                                 Skills

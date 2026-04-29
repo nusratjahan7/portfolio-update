@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import animatedImg from '@/assets/animated.png';
+import Img from '@/assets/image.png';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -33,8 +33,8 @@ const About = () => {
                     transition={{ duration: 0.7, delay: 0.2 }}
                     viewport={{ once: true, amount: 0.2 }}
                 >
-                    <div className="w-full aspect-3/4  bg-(--card) rounded-3xl border border-(--border) flex items-center justify-center relative overflow-hidden">
-                        <Image src={animatedImg} height={700} alt="animated image" />
+                    <div className="w-full aspect-3/4  bg-(--card) rounded-3xl border border-(--border) h-[400px] flex items-center justify-center relative overflow-hidden">
+                        <Image src={Img} height={400} alt="animated image" />
                     </div>
                     <div className="absolute -bottom-5 -right-5 w-30 h-30 rounded-full bg-[#c8f542]/10 border border-[#c8f542]/20 flex items-center justify-center text-[12px] font-mono text-accent text-center leading-[1.4] backdrop-blur-sm">
                         Frontend<br />Developer<br />✦
@@ -62,7 +62,6 @@ const About = () => {
                     </p>
                 </motion.div>
             </div>
-
             {/* Education Section */}
             <div className="!mt-23">
                 <motion.div
@@ -120,9 +119,9 @@ const About = () => {
                             </p>
                         </div>
                     </motion.div> */}
-                    
+
                     {/* Item 2 */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
@@ -131,7 +130,7 @@ const About = () => {
                     >
                         {/* Timeline Dot */}
                         <div className="absolute -left-1.25 top-6 w-2.25 h-2.25 bg-(--accent) rounded-full shadow-[0_0_10px_rgba(200,245,66,0.6)]"></div>
-                        
+
                         <div className="bg-[#1a1a24] border border-white/5 rounded-2xl !p-6 md:!p-8 hover:border-(--accent)/30 transition-colors duration-300">
                             <h3 className="text-white text-[18px] md:text-[20px] font-bold !mb-1">Higher Secondary Certificate (HSC) — Science</h3>
                             <div className="text-(--accent) font-semibold text-[15px] !mb-2">BAF Shaheen College Kurmitola, Dhaka Cantonment, Bangladesh</div>
@@ -144,7 +143,7 @@ const About = () => {
                         </div>
                     </motion.div>
                     {/* Item 2 */}
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
@@ -153,12 +152,12 @@ const About = () => {
                     >
                         {/* Timeline Dot */}
                         <div className="absolute -left-1.25 top-6 w-2.25 h-2.25 bg-(--accent) rounded-full shadow-[0_0_10px_rgba(200,245,66,0.6)]"></div>
-                        
+
                         <div className="bg-[#1a1a24] border border-white/5 rounded-2xl !p-6 md:!p-8 hover:border-(--accent)/30 transition-colors duration-300">
                             <h3 className="text-white text-[18px] md:text-[20px] font-bold !mb-1">Secondary School Certificate (SSC) — Science</h3>
                             <div className="text-(--accent) font-semibold text-[15px] !mb-2">Momena Ali Biggan School, Sirajgonj, Bangladesh</div>
                             <div className="font-mono text-white/40 text-[12px] tracking-wider !mb-4">
-                                2023 — 2025 · GPA: 5.00 / 5.00
+                                2022 — 2023 · GPA: 5.00 / 5.00
                             </div>
                             <p className="text-muted text-[14px] leading-relaxed font-light">
                                 Graduated with perfect GPA, winning awards for academic excellence in Mathematics and General Science. First exposure to computer basics during this period sparked an enduring curiosity for technology.
@@ -168,6 +167,7 @@ const About = () => {
 
                 </div>
             </div>
+
         </section>
     );
 };
