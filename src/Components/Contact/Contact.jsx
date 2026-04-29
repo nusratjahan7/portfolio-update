@@ -100,7 +100,7 @@ export default function Contact() {
                                     <p className="font-mono text-[10px] tracking-widest uppercase text-gray-400 leading-none !mb-0.5">
                                         {item.label}
                                     </p>
-                                    <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                                    <p className="text-sm font-medium pr-1 text-gray-800 dark:text-gray-200">
                                         {item.value}
                                     </p>
                                 </div>
