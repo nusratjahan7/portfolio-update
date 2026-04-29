@@ -12,9 +12,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true, amount: 0.3 }}
-            >
-               / Who I Am
-            </motion.div>
+            > // Who I Am </motion.div>
 
             <motion.h2
                 className="section-title"
@@ -22,8 +20,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true, amount: 0.3 }}
-            >
-                About <em>Me</em>
+            >  About <em>Me</em>
             </motion.h2>
 
             <div className="divider"></div>
