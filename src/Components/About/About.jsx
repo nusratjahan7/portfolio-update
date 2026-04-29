@@ -164,7 +164,7 @@ const About = () => {
                                 2023 — 2025 · GPA: 5.00 / 5.00
                             </div>
                             <p className="text-muted text-[14px] leading-relaxed font-light">
-                                Completed Higher Secondary Certificate with perfect GPA in Science group. Developed strong foundations in Mathematics and Physics which later contributed to my logical problem-solving approach in programming.
+                                Graduated with perfect GPA, winning awards for academic excellence in Mathematics and General Science. First exposure to computer basics during this period sparked an enduring curiosity for technology.
                             </p>
                         </div>
                     </motion.div>
