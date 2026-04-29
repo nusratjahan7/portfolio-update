@@ -1,18 +1,17 @@
-"use client";
-
+"use client"
 import Link from "next/link";
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // Import motion from framer-motion
 import { FaInstagram, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 
 export default function Contact() {
-  
+
     const contactItems = [
         {
             label: "Email",
             value: "nusratjahan77222@gmail.com",
             icon: (
-                <svg className="w-4 h-4  text-(--accent2)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-4 h-4 text-(--accent2)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                     <polyline points="2,4 12,13 22,4" />
                 </svg>
@@ -22,7 +21,7 @@ export default function Contact() {
             label: "Phone",
             value: "+880 1518-731771",
             icon: (
-                <svg className="w-4 h-4  text-(--accent2)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-4 h-4 text-(--accent2)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
                 </svg>
             ),
@@ -31,13 +30,13 @@ export default function Contact() {
             label: "WhatsApp",
             value: "+880 1518-731771",
             icon: (
-                <svg className="w-4 h-4  text-(--accent2)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-4 h-4 text-(--accent2)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
                 </svg>
             ),
         },
         {
-            label: "Telegram", // Adding Telegram
+            label: "Telegram",
             value: "@nusratjahan77",
             icon: (
                 <FaTelegramPlane className="w-4 h-4 text-(--accent2)" />
@@ -47,7 +46,7 @@ export default function Contact() {
             label: "Location",
             value: "Dhaka, Bangladesh",
             icon: (
-                <svg className="w-4 h-4  text-(--accent2)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-4 h-4 text-(--accent2)" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                     <circle cx="12" cy="10" r="3" />
                 </svg>
@@ -61,11 +60,16 @@ export default function Contact() {
     return (
         <section id="contact" className="!py-10">
             <div className="w-11/12 mx-auto">
-
                 {/* Header */}
-                <div className="!mb-10">
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="!mb-10"
+                >
                     <p className="section-tag text-3xl text-(--accent)">
-            // Contact
+                        // Contact
                     </p>
                     <h2 className="section-title text-4xl text-white !mb-4" >
                         Let&apos;s <em>connect</em>
@@ -73,13 +77,17 @@ export default function Contact() {
                     <p className="text-sm text-gray-500 dark:text-gray-400 max-w-md">
                         Have a project in mind, a collaboration idea, or just want to say hello? My inbox is always open.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start justify-center">
-
                     {/* Left — Contact Info */}
-                    <div className="flex flex-col gap-3 !ml-4">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className="flex flex-col gap-3 !ml-4"
+                    >
                         {contactItems.map((item) => (
                             <div
                                 key={item.label}
@@ -117,10 +125,14 @@ export default function Contact() {
                                 <FaInstagram className="text-[18px]" /> Instagram
                             </Link>
                         </motion.div>
-                    </div>
+                    </motion.div>
 
                     {/* Right — Form */}
-                    <form action="https://api.web3forms.com/submit" method="POST" className="flex flex-col gap-4 !ml-9">
+                    <motion.form
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                         className="flex flex-col gap-4 !ml-9">
                         <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -189,7 +201,7 @@ export default function Contact() {
                             </svg>
                             Send Message
                         </button>
-                    </form>
+                    </motion.form>
                 </div>
             </div>
         </section>
