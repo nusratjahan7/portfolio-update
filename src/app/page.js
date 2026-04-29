@@ -1,6 +1,7 @@
 
 import About from "@/Components/About/About";
 import Banner from "@/Components/Banner/Banner";
+import Contact from "@/Components/Contact/Contact";
 import Navbar from "@/Components/Navbar/Navbar";
 import Projects from "@/Components/Projects/Projects";
 import ScrollSkill from "@/Components/Skill/ScrollSkill";
@@ -15,6 +16,7 @@ export default function Home() {
       <About />
       <Skill />
       <Projects />
+      <Contact />
     </div>
   );
 }

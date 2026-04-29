@@ -109,7 +109,7 @@ const About = () => {
                         
                         <div className="absolute -left-1.25 top-6 w-2.25 h-2.25 bg-(--accent) rounded-full shadow-[0_0_10px_rgba(200,245,66,0.6)]"></div>
                         
-                        <div className="bg-[#1a1a24] border border-white/5 rounded-2xl !p-6 md:!p-8 hover:border-accent/30 transition-colors duration-300">
+                        <div className="bg-[#1a1a24] border border-white/5 rounded-2xl !p-6 md:!p-8 hover:border-(--accent)/30 transition-colors duration-300">
                             <h3 className="text-white text-[18px] md:text-[20px] font-bold !mb-1">B.Sc. in Computer Science & Engineering</h3>
                             <div className="text-accent font-semibold text-[15px] !mb-2">BRAC University, Dhaka, Bangladesh</div>
                             <div className="font-mono text-white/40 text-[12px] tracking-wider !mb-4">
@@ -132,7 +132,7 @@ const About = () => {
                         {/* Timeline Dot */}
                         <div className="absolute -left-1.25 top-6 w-2.25 h-2.25 bg-(--accent) rounded-full shadow-[0_0_10px_rgba(200,245,66,0.6)]"></div>
                         
-                        <div className="bg-[#1a1a24] border border-white/5 rounded-2xl !p-6 md:!p-8 hover:border-accent/30 transition-colors duration-300">
+                        <div className="bg-[#1a1a24] border border-white/5 rounded-2xl !p-6 md:!p-8 hover:border-(--accent)/30 transition-colors duration-300">
                             <h3 className="text-white text-[18px] md:text-[20px] font-bold !mb-1">Higher Secondary Certificate (HSC) — Science</h3>
                             <div className="text-(--accent) font-semibold text-[15px] !mb-2">BAF Shaheen College Kurmitola, Dhaka Cantonment, Bangladesh</div>
                             <div className="font-mono text-white/40 text-[12px] tracking-wider !mb-4">
@@ -154,7 +154,7 @@ const About = () => {
                         {/* Timeline Dot */}
                         <div className="absolute -left-1.25 top-6 w-2.25 h-2.25 bg-(--accent) rounded-full shadow-[0_0_10px_rgba(200,245,66,0.6)]"></div>
                         
-                        <div className="bg-[#1a1a24] border border-white/5 rounded-2xl !p-6 md:!p-8 hover:border-accent/30 transition-colors duration-300">
+                        <div className="bg-[#1a1a24] border border-white/5 rounded-2xl !p-6 md:!p-8 hover:border-(--accent)/30 transition-colors duration-300">
                             <h3 className="text-white text-[18px] md:text-[20px] font-bold !mb-1">Secondary School Certificate (SSC) — Science</h3>
                             <div className="text-(--accent) font-semibold text-[15px] !mb-2">Momena Ali Biggan School, Sirajgonj, Bangladesh</div>
                             <div className="font-mono text-white/40 text-[12px] tracking-wider !mb-4">
