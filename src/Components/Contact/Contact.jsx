@@ -86,7 +86,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="flex flex-col gap-3 !ml-4"
+                        className="flex flex-col gap-3 md:!ml-4"
                     >
                         {contactItems.map((item) => (
                             <div
@@ -100,7 +100,7 @@ export default function Contact() {
                                     <p className="font-mono text-[10px] tracking-widest uppercase text-gray-400 leading-none !mb-0.5">
                                         {item.label}
                                     </p>
-                                    <p className="text-sm font-medium pr-1 text-gray-800 dark:text-gray-200">
+                                    <p className="text-sm font-medium !pr-1 text-gray-800 dark:text-gray-200">
                                         {item.value}
                                     </p>
                                 </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                         className="flex flex-col gap-4 !ml-9">
+                         className="flex flex-col gap-4 md:!ml-9">
                         <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -192,7 +192,7 @@ export default function Contact() {
                         </div>
 
                         {/* Submit */}
-                        <button
+                         <button
                             type="submit"
                             className="flex items-center justify-center gap-2 w-full !py-3 !px-6 bg-(--accent) text-white dark:text-gray-900 text-sm font-semibold rounded-xl hover:opacity-90 active:scale-[0.98] transition-all"
                         >
@@ -200,8 +200,9 @@ export default function Contact() {
                                 <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
                             </svg>
                             Send Message
-                        </button>
+                        </button> 
                     </motion.form>
+                    
                 </div>
             </div>
         </section>
