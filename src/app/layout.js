@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import CursorEffect from "@/CursorEffects";
+import SmoothScroll from "@/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +24,13 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SmoothScroll />
+        <div className="cursor" id="cursor"></div>
+        <div className="cursor-follower" id="follower"></div>
+        <CursorEffect />
+        {children}
+      </body>
     </html>
   );
 }
