@@ -86,6 +86,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true, amount: 0.2 }}
                         className="flex flex-col gap-3 md:!ml-4"
                     >
                         {contactItems.map((item) => (
@@ -132,6 +133,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true, amount: 0.2 }}
                          className="flex flex-col gap-4 md:!ml-9">
                         <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
 
