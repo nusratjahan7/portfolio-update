@@ -2,12 +2,20 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
-  images: {
+ images: {
     domains: [
       "cdn.jsdelivr.net",
       "vectorlogo.zone",
       "assets.vercel.com",
       "cdn.simpleicons.org",
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

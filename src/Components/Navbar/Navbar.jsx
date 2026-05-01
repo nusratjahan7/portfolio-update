@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import './navbar.css'
 import useActiveSection from './useActiveSection';
+import Link from 'next/link';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -19,7 +20,17 @@ const Navbar = () => {
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" className="nav-cta">Hire Me</a></li>
+                    <li>
+                        <Link
+                            href="/Resume.pdf"
+                            download="Nusrat_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="nav-cta"
+                        >
+                           Download CV
+                        </Link>
+                    </li>
                 </ul>
 
                 <button
@@ -40,7 +51,7 @@ const Navbar = () => {
                                 About
                             </a>
                         </li>
-                        
+
                         <li>
                             <a href="#skills" onClick={() => setOpen(false)} className="block hover:text-(--accent) transition">
                                 Skills
@@ -57,10 +68,16 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="#contact" onClick={() => setOpen(false)} className="nav-cta">
-                                Hire Me
-                            </a>
-                        </li>
+                        <Link
+                            href="/Resume.pdf"
+                            download="Nusrat_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="nav-cta"
+                        >
+                           Download CV
+                        </Link>
+                    </li>
                     </ul>
                 </div>
             )}
