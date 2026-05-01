@@ -3,8 +3,41 @@ import Link from "next/link";
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 import { FaInstagram, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
+import { useState } from "react";
 
 export default function Contact() {
+
+    const [status, setStatus] = useState(""); // "sending" | "success" | "error"
+
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
+    console.log("Sending data:", data); // ← এটা add করো
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+    });
+
+    const result = await res.json(); // ← এটা add করো
+    console.log("Response:", result); // ← এটা add করো
+
+    if (res.ok) {
+        setStatus("success");
+        form.reset();
+    } else {
+        setStatus("error");
+    }
+};
+
+    // ... contactItems, inputClass same
+
 
     const contactItems = [
         {
@@ -134,11 +167,17 @@ export default function Contact() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                         viewport={{ once: true, amount: 0.2 }}
-                         className="flex flex-col gap-4 md:!ml-9">
-                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
+                        className="flex flex-col gap-4 md:!ml-9"
+                        onSubmit={handleSubmit} >
+
+                        <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY} />
+                        <input type="hidden" name="subject" value="New message from Portfolio" />
+                        <input type="checkbox" name="botcheck" className="hidden" />
+
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="flex flex-col gap-1.5">
+
                                 <label className="text-xs font-medium text-gray-500 dark:text-gray-400">First Name</label>
                                 <input
                                     type="text"
@@ -194,17 +233,32 @@ export default function Contact() {
                         </div>
 
                         {/* Submit */}
-                         <button
+                        <button
                             type="submit"
                             className="flex items-center justify-center gap-2 w-full !py-3 !px-6 bg-(--accent) text-white dark:text-gray-900 text-sm font-semibold rounded-xl hover:opacity-90 active:scale-[0.98] transition-all"
                         >
                             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
                             </svg>
-                            Send Message
-                        </button> 
+
+                            {status === "sending" ? "Sending..." : "Send Message"}
+
+                        </button>
+
+                        {/* Status messages */}
+                        {status === "success" && (
+                            <p className="text-green-500 text-sm text-center">
+                                ✅ Message sent! I'll get back to you soon.
+                            </p>
+                        )}
+                        {status === "error" && (
+                            <p className="text-red-500 text-sm text-center">
+                                ❌ Something went wrong. Please try again.
+                            </p>
+                        )}
+
                     </motion.form>
-                    
+
                 </div>
             </div>
         </section>
