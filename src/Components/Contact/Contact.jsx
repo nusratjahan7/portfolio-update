@@ -1,13 +1,13 @@
 "use client"
 import Link from "next/link";
-import { motion } from 'framer-motion'; // Import motion from framer-motion
+import { motion } from 'framer-motion'; 
 import { FaInstagram, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { useState } from "react";
 
 export default function Contact() {
 
-    const [status, setStatus] = useState(""); // "sending" | "success" | "error"
+    const [status, setStatus] = useState(""); 
 
     const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ export default function Contact() {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
-    console.log("Sending data:", data); // ← এটা add করো
+    console.log("Sending data:", data); 
 
     const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -25,8 +25,8 @@ export default function Contact() {
         body: JSON.stringify(data),
     });
 
-    const result = await res.json(); // ← এটা add করো
-    console.log("Response:", result); // ← এটা add করো
+    const result = await res.json();
+    console.log("Response:", result);
 
     if (res.ok) {
         setStatus("success");

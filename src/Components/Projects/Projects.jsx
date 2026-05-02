@@ -4,14 +4,22 @@ import { motion } from 'framer-motion';
 import digi from '@/assets/digitool.png';
 import keenKeeper from '@/assets/keenkeeper.png';
 import hero from '@/assets/hero-apps.png';
-import terra from '@/assets/terra.png';
+import goodreads from '@/assets/goodreads.png';
 import Link from 'next/link';
 import { FiGithub } from 'react-icons/fi';
 import { GoLinkExternal } from 'react-icons/go';
 
 const projects = [
     {
-        num: "01", img: digi,
+        num: "01", img: goodreads,
+        tags: ["Next.js", "React", "ES6+"],
+        name: "GoodReads",
+        desc: "Modern book app with search, filters, and clean UI. Includes authentication, private routes, and profile management.",
+        git: "https://github.com/nusratjahan7/good-reads",
+        live: "https://good-reads-swart.vercel.app/",
+    },
+    {
+        num: "02", img: digi,
         tags: ["React", "Tailwind CSS", "ES6+"],
         name: "DigiTools",
         desc: "DigiTools Web is a modern and responsive web application that provides a collection of useful digital tools in one place.",
@@ -19,7 +27,7 @@ const projects = [
         live: "https://digitools-web.vercel.app/",
     },
     {
-        num: "02", img: keenKeeper,
+        num: "03", img: keenKeeper,
         tags: ["React", "Next.js", "Recharts"],
         name: "KeenKeeper",
         desc: "FriendTrack helps you track your relationships, set contact goals, and log interactions so you never lose touch with friends.",
@@ -27,20 +35,12 @@ const projects = [
         live: "https://kin-keeper-nu.vercel.app/",
     },
     {
-        num: "03", img: hero,
+        num: "04", img: hero,
         tags: ["React", "Tailwind CSS", "Hooks"],
         name: "AppVault",
         desc: "Hero Apps is a collection of multiple small web applications built to practice and strengthen core JavaScript and frontend development skills.",
         git: "https://github.com/nusratjahan7/hero-apps",
         live: "https://hero-apps-three.vercel.app/",
-    },
-    {
-        num: "04", img: terra,
-        tags: ["React", "Tailwind CSS", "ES6+"],
-        name: "TerraVerde",
-        desc: "TerraVerde is a premium agricultural website with a cinematic and modern design. It presents sustainable farming solutions through smooth animations, clean UI, and a nature-inspired color palette.",
-        git: "https://github.com/nusratjahan7/terra-verde",
-        live: "https://terra-verde-vert.vercel.app/",
     },
 ];
 
