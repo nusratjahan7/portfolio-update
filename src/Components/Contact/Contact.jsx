@@ -1,40 +1,40 @@
 "use client"
 import Link from "next/link";
-import { motion } from 'framer-motion'; 
+import { motion } from 'framer-motion';
 import { FaInstagram, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { useState } from "react";
 
 export default function Contact() {
 
-    const [status, setStatus] = useState(""); 
+    const [status, setStatus] = useState("");
 
     const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("sending");
+        e.preventDefault();
+        setStatus("sending");
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
 
-    console.log("Sending data:", data); 
+        console.log("Sending data:", data);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-    });
+        const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data), 
+        });
 
-    const result = await res.json();
-   
+        const result = await res.json();
 
-    if (res.ok) {
-        setStatus("success");
-        form.reset();
-    } else {
-        setStatus("error");
-    }
-};
+
+        if (res.ok) {
+            setStatus("success");
+            form.reset();
+        } else {
+            setStatus("error");
+        }
+    };
 
     // ... contactItems, inputClass same
 
@@ -170,8 +170,7 @@ export default function Contact() {
                         className="flex flex-col gap-4 md:!ml-9"
                         onSubmit={handleSubmit} >
 
-                        <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY} />
-                        <input type="hidden" name="subject" value="New message from Portfolio" />
+                        
                         <input type="checkbox" name="botcheck" className="hidden" />
 
 
