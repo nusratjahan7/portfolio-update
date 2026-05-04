@@ -63,7 +63,7 @@ const Banner = () => {
             />
 
             {/* Hero content */}
-            <div className="relative z-10 max-w-3xl !mb-10">
+            <div className="relative z-10 max-w-lg !mb-10">
 
                 {/* Badge */}
                 <motion.div

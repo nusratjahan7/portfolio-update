@@ -211,11 +211,11 @@ export default function Contact() {
 
                         <div className="flex flex-col gap-1.5">
                             <label className="text-xs font-medium text-gray-500 dark:text-gray-400">Subject</label>
+
                             <input
                                 type="text"
                                 name="subject"
-                                placeholder="Project Collaboration"
-                                required
+                                placeholder="Project Collaboration" 
                                 className={inputClass}
                             />
                         </div>

@@ -15,26 +15,40 @@ const tools = [
 
 
 const ScrollSkill = () => {
-    return (
-        <div className="!mb-2.5 !overflow-hidden w-full">
-  <div className="flex gap-5 w-max animate-[scroll_15s_linear_infinite]">
-    {[...tools, ...tools].map((tool, index) => (
+  const repeated = [...tools, ...tools];
+  return (
+    <div style={{ overflow: 'hidden', width: '100%', marginBottom: '10px' }}>
       <div
-        key={index}
-        className="flex items-center justify-center gap-2.5 !px-5 !py-2.5 rounded-[50px] bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 text-[14px] font-semibold text-white h-10 min-w-[120px] text-center hover:-translate-y-[5px] hover:shadow-[0_5px_15px_rgba(0,0,0,0.1)] md:text-[12px] md:!px-3 md:!py-1.5"
+        style={{
+          display: 'flex',
+          gap: '20px',
+          width: 'max-content',
+          animation: 'scroll 35s linear infinite',
+        }}
       >
-        <Image 
-          width={30} height={30}
-          src={tool.icon}
-          alt={tool.name}
-          className="w-5 h-5 object-contain transition-all duration-300 dark:invert md:w-[18px] md:h-[18px]"
-        />
-        <span className="text-sm">{tool.name}</span>
+        {/* First copy */}
+        {repeated.map((tool, index) => (
+          <div
+            key={`a-${index}`}
+            className="flex items-center justify-center gap-2.5 !px-5 !py-2.5 rounded-[50px] bg-white/10 backdrop-blur-md border border-white/10 text-[14px] font-semibold text-white h-10 min-w-[120px] text-center"
+          >
+            <Image width={20} height={20} src={tool.icon} alt={tool.name} className="w-5 h-5 object-contain dark:invert" />
+            <span className="text-sm">{tool.name}</span>
+          </div>
+        ))}
+        {/* Exact duplicate for seamless loop */}
+        {repeated.map((tool, index) => (
+          <div
+            key={`b-${index}`}
+            className="flex items-center justify-center gap-2.5 !px-5 !py-2.5 rounded-[50px] bg-white/10 backdrop-blur-md border border-white/10 text-[14px] font-semibold text-white h-10 min-w-[120px] text-center"
+          >
+            <Image width={20} height={20} src={tool.icon} alt={tool.name} className="w-5 h-5 object-contain dark:invert" />
+            <span className="text-sm">{tool.name}</span>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</div>
-    );
+    </div>
+  );
 };
 
 export default ScrollSkill;
