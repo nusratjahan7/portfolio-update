@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌟 Nusrat Jahan — Frontend Developer
 
-## Getting Started
+Welcome to my personal portfolio!  
+I’m a passionate Frontend Developer and Creator focused on building interactive, responsive, and beautiful web experiences using modern technologies like **React**, **Next.js**, and **Tailwind CSS**.
 
-First, run the development server:
+🔗 **Live Site:** [https://portfolio-update-sigma-three.vercel.app](https://portfolio-update-sigma-three.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 👩‍💻 About Me
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Hello! I’m **Nusrat Jahan**, a frontend developer based in Bangladesh. I am dedicated to learning and building web applications that are clean, efficient, and user‑friendly. I believe in the power of technology to create positive change, and I’m committed to constantly improving my skills.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+My journey in web development has just started, and I'm eager to work on innovative projects, contribute to open-source communities, and grow as a developer.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎓 Education
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I completed my education at Baf Shaheen College Kurmitola.  
+**Degree:** Higher Secondary Certificate (HSC) — Science
+**Year of Graduation:** 2025
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 💻 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Here are the core technologies and tools I work with:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Technology       | Category      |
+|------------------|---------------|
+| HTML5            | Markup        |
+| CSS3             | Styling       |
+| JavaScript       | Programming   |
+| React            | UI Library    |
+| Next.js          | Framework     |
+| Tailwind CSS     | CSS Framework |
+| Git & GitHub     | Version Control |
+| Vercel           | Deployment    |
+| Netlify          | Deployment    |
+| Figma            | Design        |
+
+---
+
+## 🛠 Skills
+
+- 🧠 **Responsive Web Design**: Crafting user interfaces that look great on all screen sizes.
+- ⚛️ **Modern Frontend Development**: Building interactive web apps using React, Next.js, and JavaScript.
+- 🎨 **UI / UX Design**: Focused on creating seamless user experiences with clean and intuitive designs.
+- 📦 **Deployment**: Deploying projects with Vercel and Netlify.
+- 🧑‍💻 **Version Control**: Using Git for efficient project management and collaboration.
+
+---
+
+## 📁 Projects
+
+Here are some of the projects I’ve worked on, showcasing my skills and creativity:
+
+- **Project One** – *A modern web app built with React and Next.js*  
+  🔗 [Demo](https://good-reads-swart.vercel.app/) | 🔗 [Code](https://github.com/nusratjahan7/good-reads)
+
+- **Project Two** – *A responsive web application that provides a collection of useful digital tools in one place.*  
+  🔗 [Demo](https://digitools-web.vercel.app/) | 🔗 [Code](https://github.com/nusratjahan7/digitools-web)
+
+
+---
+
+## 📬 Contact
+
+I’d love to connect with you! Feel free to reach out for job opportunities, collaborations, or feedback:
+
+- 📧 **Email:** [nusratjahan77222@gmail.com](mailto:nusratjahan77222@gmail.com)
+- 📞 **Phone:** +880 1518‑731771
+- 💼 **LinkedIn:** [LinkedIn URL](https://www.linkedin.com/in/nusratjahan77)
+- 🐱 **GitHub:** [GitHub URL](https://github.com/nusratjahan7)
+
+---
+
+### Thank you for visiting my portfolio! 🚀
