@@ -17,8 +17,10 @@ My journey in web development has just started, and I'm eager to work on innovat
 
 ## 🎓 Education
 
-I completed my education at Baf Shaheen College Kurmitola.  
+I completed my education at Baf Shaheen College Kurmitola.
+  
 **Degree:** Higher Secondary Certificate (HSC) — Science
+
 **Year of Graduation:** 2025
 
 ---

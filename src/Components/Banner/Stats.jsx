@@ -16,7 +16,7 @@ const Stats = () => {
                 ].map(({ number, label }) => (
                     <div
                         key={label}
-                        className="bg-(--card) border border-(--border) rounded-2xl !px-6 !py-4 text-center transition-all duration-300 hover:border-(--accent)hover:-translate-x-1"
+                        className="bg-(--card) border border-(--border) rounded-2xl !px-4 !py-3 text-center transition-all duration-300 hover:border-(--accent)hover:-translate-x-1"
                     >
                         <div className="font-['Playfair_Display',serif] text-2xl font-black text-(--accent) leading-none">
                             {number}

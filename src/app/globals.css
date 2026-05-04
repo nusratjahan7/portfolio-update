@@ -37,6 +37,7 @@ body {
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
+  max-width: 100vw;
   cursor: none;
 }
 
@@ -79,13 +80,14 @@ body::before {
   pointer-events: none;
   z-index: 100;
   opacity: 0.4;
+  overflow-x: hidden;
 }
 
 .font1{
   font-family: "Playfair Display", serif;
 }
 
-  section { padding: 40px 60px; }
+  section { padding: 40px 24px; }
   .section-tag {
     font-family: 'Space Mono', monospace;
     font-size: 13px;
@@ -112,8 +114,14 @@ body::before {
     margin: 20px 0 40px;
   }
 
-  @media (max-width: 768px) {
+ @media (min-width: 768px) {
   section {
-    padding: 30px 25px; /* tablet */
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    padding: 30px 20px;
   }
 }

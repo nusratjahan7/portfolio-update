@@ -40,7 +40,7 @@ const Banner = () => {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex flex-col md:flex-row items-center !px-8 md:!px-16 !pt-32 !pb-2 overflow-hidden"
+            className="relative min-h-screen flex flex-col md:flex-row items-center !px-5 md:!px-16 !pt-32 !pb-2 overflow-hidden"
         >
             {/* Background gradients */}
             <div
@@ -139,7 +139,7 @@ const Banner = () => {
                 variants={fadeInRight}
                 initial="hidden"
                 animate="visible"
-                className="hidden md:flex md:flex-col absolute right-16 top-1/2 -translate-y-1/2 gap-5"
+                className="hidden md:flex md:flex-col absolute right-4 lg:right-16 top-1/2 -translate-y-1/2 gap-5"
             >
                 {[
                     { number: '10+', label: 'Projects Built' },
@@ -163,7 +163,7 @@ const Banner = () => {
             <Stats />
 
             {/* Scroll indicator */}
-            <div className="absolute right-1 top-1/3 flex items-center gap-2 text-xs tracking-widest uppercase text-(--muted) font-['Space_Mono',monospace] [writing-mode:vertical-rl]">
+            <div className="hidden md:flex absolute right-1 top-1/3 items-center gap-2 text-xs tracking-widest uppercase text-(--muted) font-['Space_Mono',monospace] [writing-mode:vertical-rl]">
                 <motion.div
                     variants={scrollDown}
                     animate="animate"

@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col overflow-x-hidden">
         <SmoothScroll />
         <div className="cursor" id="cursor"></div>
         <div className="cursor-follower" id="follower"></div>

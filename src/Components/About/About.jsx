@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <section id="about" className="bg-(--surface)"> 
+        <section id="about" className="bg-(--surface) overflow-hidden"> 
             <motion.div
                 className="section-tag"
                 initial={{ opacity: 0, y: 20 }}
@@ -25,7 +25,7 @@ const About = () => {
 
             <div className="divider"></div>
 
-            <div className="grid md:grid-cols-2 gap-20 items-center mt-16">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-20 items-center mt-16">
                 <motion.div
                     className="relative"
                     initial={{ opacity: 0, x: -50 }}
@@ -36,7 +36,7 @@ const About = () => {
                     <div className="w-full aspect-3/4  bg-(--card) rounded-3xl border border-(--border) h-[400px] flex items-center justify-center relative overflow-hidden">
                         <Image src={Img} height={400} alt="animated image" />
                     </div>
-                    <div className="absolute -bottom-5 -right-5 w-30 h-30 rounded-full bg-[#c8f542]/10 border border-[#c8f542]/20 flex items-center justify-center text-[12px] font-mono text-(--accent) text-center leading-[1.4] backdrop-blur-sm">
+                    <div className="absolute -bottom-5 right-1 md:-right-5 w-30 h-30 rounded-full bg-[#c8f542]/10 border border-[#c8f542]/20 flex items-center justify-center text-[12px] font-mono text-(--accent) text-center leading-[1.4] backdrop-blur-sm">
                         Frontend<br />Developer<br />✦
                     </div>
                 </motion.div>
