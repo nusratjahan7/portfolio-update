@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import { motion } from 'framer-motion';
+import github from '@/assets/icons/github.png'
 
 const skills = [
     { name: "HTML5", level: "Foundation", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
@@ -9,7 +10,7 @@ const skills = [
     { name: "React", level: "UI Library", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
     { name: "Next.js", level: "Framework", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
     { name: "Tailwind", level: "CSS Framework", icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
-    { name: "Git & GitHub", level: "Version Control", icon: "https://devicon-website.vercel.app/api/github/original.svg?color=%23FFFFFF" },
+    { name: "Git & GitHub", level: "Version Control", icon: github },
     { name: "Vercel", level: "Deployment", icon: "https://assets.vercel.com/image/upload/v1662130559/front/favicon/vercel/180x180.png" },
     { name: "Netlify", level: "Hosting", icon: "https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" },
     { name: "Figma", level: "UI Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },

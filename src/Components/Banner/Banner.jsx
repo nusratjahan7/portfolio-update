@@ -40,7 +40,7 @@ const Banner = () => {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex flex-col md:flex-row items-center !px-16 !pt-32 !pb-2 overflow-hidden"
+            className="relative min-h-screen flex flex-col md:flex-row items-center !px-8 md:!px-16 !pt-32 !pb-2 overflow-hidden"
         >
             {/* Background gradients */}
             <div

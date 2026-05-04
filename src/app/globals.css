@@ -111,3 +111,9 @@ body::before {
     background: var(--accent);
     margin: 20px 0 40px;
   }
+
+  @media (max-width: 768px) {
+  section {
+    padding: 30px 25px; /* tablet */
+  }
+}
