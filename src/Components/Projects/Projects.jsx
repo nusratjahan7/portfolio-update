@@ -66,7 +66,7 @@ const Projects = () => {
                 viewport={{ once: true, amount: 0.5 }}
                 className="divider h-1 bg-linear-to-r from-accent to-blue-500 w-1/5 mx-auto !mb-12"></motion.div>
 
-            <div className="projects-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="projects-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {projects.map((project) => (
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -94,7 +94,7 @@ const Projects = () => {
                             <div className="project-emoji relative text-4xl z-10">{project.emoji}</div>
                         </div>
 
-                        <div className="project-body !p-7 flex flex-col justify-between flex-1">
+                        <div className="project-body !p-6 flex flex-col justify-between flex-1">
                             <div>
                                 <div className="project-tags flex flex-wrap gap-2 !mb-4">
                                     {project.tags.map((tag) => (
@@ -107,7 +107,7 @@ const Projects = () => {
                                 </div>
                             </div>
                             <div className="project-footer !mt-6 !pt-5 border-t border-(--border) flex justify-between items-center gap-4">
-                                <div className="project-links flex flex-wrap sm:flex-nowrap gap-4">
+                                <div className="project-links flex flex-wrap lg:flex-nowrap gap-3">
                                     {project.git && (
                                         <Link href={project.git} target="_blank" rel="noopener noreferrer">
                                             <button className="proj-link flex items-center text-sm gap-2 !px-3 !py-2 bg-(--accent)/10 text-(--accent) border border-(--accent)/20 rounded-full hover:bg-(--accent)/20 transition-colors">
