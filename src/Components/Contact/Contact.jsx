@@ -26,7 +26,7 @@ export default function Contact() {
     });
 
     const result = await res.json();
-    console.log("Response:", result);
+   
 
     if (res.ok) {
         setStatus("success");
