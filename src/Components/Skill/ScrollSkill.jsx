@@ -16,12 +16,12 @@ const tools = [
 
 const ScrollSkill = () => {
     return (
-        <div className="!mb-2.5 overflow-hidden">
-  <div className="flex gap-5 animate-[scroll_15s_linear_infinite]">
+        <div className="!mb-2.5 !overflow-hidden w-full">
+  <div className="flex gap-5 w-max animate-[scroll_15s_linear_infinite]">
     {[...tools, ...tools].map((tool, index) => (
       <div
         key={index}
-        className="flex items-center justify-center gap-2.5 !px-5 1py-2.5 rounded-[50px] bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 text-[14px] font-semibold text-white h-10 min-w-[120px] text-center hover:-translate-y-[5px] hover:shadow-[0_5px_15px_rgba(0,0,0,0.1)] md:text-[12px] md:px-3 md:py-1.5"
+        className="flex items-center justify-center gap-2.5 !px-5 !py-2.5 rounded-[50px] bg-white/10 backdrop-blur-md border border-white/10 transition-all duration-300 text-[14px] font-semibold text-white h-10 min-w-[120px] text-center hover:-translate-y-[5px] hover:shadow-[0_5px_15px_rgba(0,0,0,0.1)] md:text-[12px] md:!px-3 md:!py-1.5"
       >
         <Image 
           width={30} height={30}
