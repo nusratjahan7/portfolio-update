@@ -10,31 +10,31 @@ export default function Contact() {
     const [status, setStatus] = useState("");
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus("sending");
+  e.preventDefault();
+  setStatus("sending");
 
-        const form = e.currentTarget;
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
 
-        console.log("Sending data:", data);
+  const res = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      ...data,
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+    }),
+  });
 
-        const res = await fetch("/api/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data), 
-        });
+  const result = await res.json();
 
-        const result = await res.json();
-
-
-        if (res.ok) {
-            setStatus("success");
-            form.reset();
-        } else {
-            setStatus("error");
-        }
-    };
+  if (res.ok) {
+    setStatus("success");
+    form.reset();
+  } else {
+    setStatus("error");
+  }
+};
 
     // ... contactItems, inputClass same
 
