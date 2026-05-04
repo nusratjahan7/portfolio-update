@@ -4,6 +4,8 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
+    console.log("API KEY:", process.env.WEB3FORMS_KEY); // debug
+
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -13,7 +15,10 @@ export async function POST(req) {
       }),
     });
 
-    const result = await res.json();
+    const text = await res.text(); 
+    console.log("Web3Forms response:", text);
+
+    const result = JSON.parse(text);
 
     if (res.ok) {
       return NextResponse.json({ success: true });
@@ -21,6 +26,7 @@ export async function POST(req) {
       return NextResponse.json({ success: false, error: result }, { status: 500 });
     }
   } catch (err) {
+    console.error("Route error:", err.message);
     return NextResponse.json({ success: false, error: err.message }, { status: 500 });
   }
 }
